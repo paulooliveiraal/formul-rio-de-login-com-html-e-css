@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #F19A18, #FFDEAD);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* Quadrado do formulário */
+main.container {
+    background: #F19A18;
+    max-width: 350px;
+    min-height: 40vh;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+/* Nome login */
+main h2{
+    font-weight: 500;
+    margin-bottom: 2rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* Deixar tomando todo o espaço do form */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Campos de login e senha */
+.input-field {
+    position: relative;
+}
+
+form .input-field:first-child {
+    margin-bottom: 0.5rem;
+}
+
+.input-field .underline::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.input-field .underline::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #ffdead, #fca626);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field input:focus ~ .underline::after{
+    transform: scaleX(1);
+}
+
+.input-field input {
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    background: #F19A18;
+}
+
+.input-field input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Botão de Entrar */
+form input[type="submit"] {
+    margin-top: 2rem;
+    padding: 0.4rem;
+    width: 100%;
+    background: linear-gradient(to top, #ffdead, #FFFFFF);
+    cursor: pointer;
+    color: black;
+    font-size: 0.9rem;
+    font-weight: 400;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    letter-spacing: 0.5px;
+}
+
+/* botões sociais */
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.footer span {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.footer .social-fields {
+    padding: 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.footer .social-field a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+.footer .social-field a i {
+    margin: 0 0.3rem;
+}
+
+/* Botão de login com Facebook */
+.footer .social-field.facebook {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    border-radius: 3px;
+    padding: 0.3rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Botão de login com Google */
+.footer .social-field.google {
+    background: linear-gradient(to right, #4797e2,  #4f9ce4);
+    border-radius: 3px;
+    padding: 0.3rem;
+    margin-top: 0.5rem;
+}
+
+/* Coloração do botão do google (Fazer login com google) */
+.fa-google{
+    background: 
+    linear-gradient(to bottom left, transparent 49%, #fbbc05 50%) 0 25%/48% 40%,
+    linear-gradient(to top    left, transparent 49%, #fbbc05 50%) 0 75%/48% 40%,
+
+    linear-gradient( -40deg, transparent 53%, #ea4335 54%),
+    linear-gradient(  45deg, transparent 46%, #4285f4 48%),
+    #34a853;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
